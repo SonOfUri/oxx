@@ -1,0 +1,82 @@
+.l_posts .b_bkg {
+    overflow: hidden
+}
+
+.l_posts.vr1 .i_bkg {
+    -webkit-transition: -webkit-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    -ms-transition: -ms-transform .2s ease-out;
+    -o-transition: -o-transform .2s ease-out;
+    transition: transform .2s ease-out
+}
+
+.l_posts.vr1 .i_post:hover .i_bkg {
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+    transform: scale(1.06)
+}
+
+.l_posts.vr1 .i_bkg:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .1)
+}
+
+.l_posts .b_bkg img {
+    position: absolute
+}
+
+.i_post:hover .b_bkg img {
+    -webkit-animation: .6s ease 0s go_link_arrow;
+    -moz-animation: .6s ease 0s go_link_arrow;
+    -ms-animation: .6s ease 0s go_link_arrow;
+    -o-animation: .6s ease 0s go_link_arrow;
+    animation: .6s ease 0s go_link_arrow
+}
+
+.i_post .tt {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0
+}
+
+.i_post time {
+    display: inline-block
+}
+
+@media(max-width:650px) {
+    .l_posts {
+        margin-top: 1.25em
+    }
+    .l_posts .i_post {
+        padding-bottom: 3em
+    }
+    .l_posts .b_bkg {
+        width: 100vw;
+        margin-left: -1em
+    }
+    .i_post.half .b_bkg {
+        margin-bottom: .75em
+    }
+    .l_posts .i_bkg {
+        padding-top: 66.6667%
+    }
+    .l_posts .b_bkg img {
+        width: 2.625em;
+        left: 1em;
+        bottom: 1em
+    }
+    .i_post .tt {
+        font-size: .9em
+    }
+    .i_post.half time:not(:first-child) {
+        margin-top: 0;
+        font-size: .75em
+    }
+}
